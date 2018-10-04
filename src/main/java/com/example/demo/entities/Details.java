@@ -24,9 +24,9 @@ public class Details implements Serializable{
 
 	
 
-	public Details(Long idDetail, String photo, String copiePasseport, String statut, DemandeVisa demandeVisa) {
+	public Details( String photo, String copiePasseport, String statut, DemandeVisa demandeVisa) {
 		super();
-		this.idDetail = idDetail;
+		
 		this.photo = photo;
 		this.copiePasseport = copiePasseport;
 		this.statut = statut;

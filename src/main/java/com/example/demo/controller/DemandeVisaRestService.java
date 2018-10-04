@@ -34,6 +34,7 @@ public class DemandeVisaRestService {
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value="/demandevisas",method=RequestMethod.POST)
 	public DemandeVisa save(@RequestBody DemandeVisa dv) {
+		
        return demandeVisaRepository.save(dv);
 }
 	@CrossOrigin(origins = "*")

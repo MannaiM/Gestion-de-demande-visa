@@ -12,7 +12,7 @@ import java.util.List;
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
     public Client findClientByNom(String nom);
-    
+    public Long findIdByNom(String nom);
     public Client  findByMail(String mail);
 
 }

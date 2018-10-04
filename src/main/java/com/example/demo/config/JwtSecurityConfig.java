@@ -43,8 +43,8 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
      security.authorizeRequests().antMatchers(HttpMethod.POST,"/**").permitAll();//(permter que au  Role ADMIN accese a /user avec post)
      security.authorizeRequests().antMatchers(HttpMethod.POST,"/login/**").permitAll();
      security.authorizeRequests().antMatchers(HttpMethod.GET,"/user/**").permitAll();
-     //security.addFilter(new JWTAuthenticationFilter(authenticationManager()));
-     //security.addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+     security.addFilter(new JWTAuthenticationFilter(authenticationManager()));
+     security.addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
      //security.authorizeRequests().anyRequest().authenticated();*/
     }
 }
